@@ -6,7 +6,7 @@ function renderEmendations(data) {
     const div = document.createElement("div");
     div.className = "emendation";
 
-    const imagePath = `emendations/${entry.number}/image.png`;
+    const imagePath = `emendations/${entry.number}/${entry.number}.png`;
 
     div.innerHTML = `
       <strong>Emendation #${entry.number}</strong><br/>
