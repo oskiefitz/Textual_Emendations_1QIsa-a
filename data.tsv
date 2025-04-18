@@ -1,1 +1,4 @@
+number	word_transliterated	length	type_of_emendation	num_characters	heatmap_data
+1       katab              5       deletion              5               0.6,0.3
+2       el                 2       insertion             2               0.2,0.8
 
