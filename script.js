@@ -1,6 +1,6 @@
 function renderEmendations(data) {
   const container = document.getElementById("emendationContainer");
-  container.innerHTML = ""; // Clear existing
+  container.innerHTML = "";
 
   data.forEach(entry => {
     const div = document.createElement("div");
@@ -30,12 +30,11 @@ function filterData(data, query) {
 }
 
 function init() {
-  Papa.parse("data.tsv", {
+  Papa.parse("data.csv", {
     download: true,
     header: true,
     complete: function(results) {
-      let allData = results.data;
-
+      let allData = results.data.filter(row => row.number); // Clean empty rows
       renderEmendations(allData);
 
       document.getElementById("searchInput").addEventListener("input", function () {
@@ -47,4 +46,3 @@ function init() {
 }
 
 init();
-
